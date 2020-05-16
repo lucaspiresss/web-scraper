@@ -1,17 +1,17 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWebScraper", "SimpleWebScraper\SimpleWebScraper.csproj", "{A0AA0581-19F7-4956-AE06-B8F4670CD36E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWebScraper", "SimpleWebScraper\SimpleWebScraper.csproj", "{EACACC65-817F-43F7-9AC7-3FC33747B286}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|anycpu = Debug|anycpu
-		Release|anycpu = Release|anycpu
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A0AA0581-19F7-4956-AE06-B8F4670CD36E}.Debug|anycpu.ActiveCfg = Debug|anycpu
-		{A0AA0581-19F7-4956-AE06-B8F4670CD36E}.Debug|anycpu.Build.0 = Debug|anycpu
-		{A0AA0581-19F7-4956-AE06-B8F4670CD36E}.Release|anycpu.ActiveCfg = Release|anycpu
-		{A0AA0581-19F7-4956-AE06-B8F4670CD36E}.Release|anycpu.Build.0 = Release|anycpu
+		{EACACC65-817F-43F7-9AC7-3FC33747B286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EACACC65-817F-43F7-9AC7-3FC33747B286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EACACC65-817F-43F7-9AC7-3FC33747B286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EACACC65-817F-43F7-9AC7-3FC33747B286}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
