@@ -10,7 +10,7 @@ namespace SimpleWebScraper.Workers
     {
         public List<string> Scrape (ScrapeCriteria scrapeCriteria)
         {
-            List<string> scrappedElements = new List<string>();
+            List<string> scraperElements = new List<string>();
 
             MatchCollection matches = Regex.Matches(scrapeCriteria.Data, scrapeCriteria.Regex, scrapeCriteria.RegexOption);
 
@@ -18,7 +18,7 @@ namespace SimpleWebScraper.Workers
             {
                 if (!scrapeCriteria.Parts.Any())
                 {
-                    scrappedElements.Add(match.Groups[0].Value);
+                    scraperElements.Add(match.Groups[0].Value);
                 }
                 else
                 {
@@ -26,12 +26,12 @@ namespace SimpleWebScraper.Workers
                     {
                         Match matchedPart = Regex.Match(match.Groups[0].Value, part.Regex, part.RegexOption);
 
-                        if (matchedPart.Success) scrappedElements.Add(matchedPart.Groups[1].Value);
+                        if (matchedPart.Success) scraperElements.Add(matchedPart.Groups[1].Value);
                     }
                 }
             }
 
-            return scrappedElements;
+            return scraperElements;
         }
     }
 }
