@@ -1,0 +1,17 @@
+Opportunities to Develop and Improve
+
+While I am proud of the progress I made this year, there are areas where I see opportunities to grow and contribute more meaningfully.
+	1.	Scaling Knowledge Sharing
+	•	While I successfully mentored team members on production releases and addressed questions during code reviews, I can improve by establishing a more structured approach to knowledge sharing. For example, creating a series of training modules, onboarding guides, or regular technical workshops could help streamline team upskilling and make knowledge transfer more scalable and consistent.
+	2.	Proactive Risk Identification
+	•	Although I worked on automating and improving existing processes, I see an opportunity to be more proactive in identifying potential risks or inefficiencies earlier in the development and release cycle. By focusing on preemptive measures, I could help reduce last-minute scope changes or late merge requests, further aligning with the “Faster and Safer Releases” initiative.
+	3.	Broadening Technical Expertise
+	•	While I have made strides in continuous learning, there are opportunities to deepen my knowledge in areas such as advanced deployment strategies (e.g., container orchestration and CI/CD best practices) or newer technologies relevant to our projects. This could enable me to introduce more innovative solutions to the team.
+	4.	Stakeholder Communication
+	•	Although I collaborated effectively with cross-functional teams, I could enhance my impact by improving how I communicate technical updates or decisions to stakeholders. Simplifying complex information for non-technical audiences and providing clearer insights into project statuses or improvements could foster stronger alignment and trust.
+	5.	Expanding Ownership in Strategic Initiatives
+	•	While I contributed to important OKRs and team goals, there is an opportunity to take a more prominent leadership role in shaping and driving strategic initiatives, such as planning future automation goals or defining technical roadmaps for the team. This could enhance my influence beyond day-to-day operations.
+
+Potential Impact of These Improvements
+
+By addressing these areas, I can contribute more effectively to the team’s long-term scalability, strengthen collaboration across teams, and introduce innovative solutions that drive business and technical impact. Additionally, becoming more proactive and strategic in my approach would position me as a stronger leader within the team.
