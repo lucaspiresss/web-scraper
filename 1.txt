@@ -1,0 +1,15 @@
+This year, I focused on delivering impactful results, demonstrating leadership, and fostering collaboration. My strengths include technical problem-solving, mentorship, and process automation, all of which contributed to the team’s scalability, efficiency, and resilience.
+
+One of my key achievements was leading the preparation and coordination of approximately 25 production releases, including both numerical and off-cycle releases. This involved collaborating closely with SWAT, Release Management, EP, and ASR teams, ensuring successful outcomes. While I led the process, the results are a testament to the strong teamwork and cross-functional collaboration that defined these efforts.
+
+To enhance team scalability, I trained team members to take ownership of the release process. This not only reduced dependency on a single individual but also increased the team’s operational resilience.
+
+On the technical side, I developed deployment scripts and jobs to improve stability and address bugs in critical areas such as RAConfig, Autosys, and ADT App. One notable achievement was refactoring oil files, which reduced Autosys deployment times by approximately 90%, a significant efficiency gain.
+
+I also implemented code coverage reports to improve test coverage, directly contributing to better code quality across project repositories. Additionally, I automated several manual steps in the production release process, such as web server verification, RAConfig folder backups, and updating the status of Autosys jobs. These automations streamlined the release process and reduced potential for errors.
+
+Beyond these contributions, I supported artifact onboarding and migrations to automation tools, with examples including PokerDataService, CommMarketData, KryptonService, and KubernetesJobService. I also developed a script to analyze and present data for late merge requests, aligning with the “Faster and Safer Releases” initiative, a platform OKR. This work enabled better tracking and decision-making around late-scope additions to releases.
+
+I maintained a commitment to continuous learning, earning certifications and upskilling through courses, seminars, and conferences. One notable milestone was achieving the Certified Engineer Silver title from UBS, which reflects my dedication to technical excellence.
+
+Finally, I contributed to UBS’s community initiatives as a volunteer, participating in the “Beyond Labels” inclusive job fair and the “Spread Your Wings” mentorship program supporting individuals displaced by the war in Ukraine.
