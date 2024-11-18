@@ -1,0 +1,25 @@
+Demonstrated Strengths and Behaviors
+
+	1.	Ownership and Accountability
+	•	Demonstrated Strength: I consistently took ownership of critical responsibilities, such as preparing and coordinating 25 production releases. I ensured seamless execution by collaborating effectively with cross-functional teams (e.g., SWAT, Release Management, EP, and ASR) and proactively addressing challenges.
+	•	Future Focus: To further demonstrate ownership, I could take a more strategic role in defining improvements to the release process, such as setting long-term goals for automation and scalability, and proposing new metrics to measure success.
+	2.	Invent and Simplify
+	•	Demonstrated Strength: I automated several manual steps in the production release process, significantly improving efficiency and reducing errors. Examples include automating web server verification, RAConfig backups, and status updates for Autosys jobs. Additionally, my refactoring work reduced Autosys deployment time by 90%.
+	•	Future Focus: Moving forward, I can expand this behavior by exploring opportunities for end-to-end automation of the release pipeline and proactively identifying other repetitive tasks or bottlenecks that could benefit from automation.
+	3.	Learn and Be Curious
+	•	Demonstrated Strength: I prioritized upskilling through certifications, courses, and conferences, earning the Certified Engineer Silver title. I also implemented new tools like code coverage reports to enhance the quality of our repositories, reflecting my ability to bring fresh ideas to the team.
+	•	Future Focus: I can build on this by delving deeper into advanced deployment technologies and contributing new innovations to team projects. For example, researching cutting-edge CI/CD tools or container orchestration practices could position me to introduce impactful solutions.
+	4.	Collaboration and Teamwork
+	•	Demonstrated Strength: I supported team members by sharing knowledge during code reviews, mentoring on production releases, and training new joiners. Additionally, I engaged with cross-functional teams and contributed to inclusive initiatives like “Beyond Labels” and “Spread Your Wings.”
+	•	Future Focus: To further demonstrate collaboration, I could formalize mentorship programs or develop reusable onboarding resources, ensuring new team members ramp up more efficiently and feel supported.
+	5.	Customer Obsession
+	•	Demonstrated Strength: My work on automating processes and ensuring smooth production releases directly contributed to a better experience for end users by reducing downtime and improving release reliability. I also supported critical initiatives like the “Faster and Safer Releases” OKR by providing actionable data on late merge requests.
+	•	Future Focus: I can enhance this behavior by engaging more closely with stakeholders to understand end-user needs and incorporating their feedback into technical solutions, further aligning releases with customer expectations.
+
+Examples of How to Demonstrate Behaviors Better
+
+	•	Ownership: Take initiative to propose a long-term vision for team processes, such as a roadmap for future automation or operational enhancements.
+	•	Collaboration: Lead quarterly retrospectives with cross-functional teams to identify lessons learned and areas for improved collaboration.
+	•	Learn and Be Curious: Share key takeaways from certifications or seminars in team meetings, sparking discussions and encouraging others to explore new technologies.
+	•	Customer Obsession: Organize regular feedback sessions with stakeholders to align technical efforts with business goals and customer needs.
+	•	Invent and Simplify: Advocate for an innovation day within the team to brainstorm and prototype new ideas for process improvements.
