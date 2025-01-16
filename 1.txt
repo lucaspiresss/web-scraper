@@ -1,61 +1,13 @@
-Recommended Order for Job Parameters
-	1.	Job Name: Define the name of the job first (implicit when you start the job definition).
-	2.	extends: Specify if the job inherits from other templates.
-	3.	rules/only/except: Define when the job should run. Use rules if possible, as it’s more flexible and recommended over only and except.
-	4.	variables: Set any job-specific environment variables.
-	5.	before_script: Define any commands to execute before the main script.
-	6.	script: Specify the main script for the job. This is the core part of the job definition.
-	7.	after_script: Define commands to run after the main script, regardless of success or failure.
-	8.	stage: Assign the job to a specific pipeline stage (e.g., build, test, deploy).
-	9.	tags: Specify any tags to run the job on specific runners.
-	10.	artifacts: Define any files or directories to save as artifacts.
-	11.	cache: Specify caching rules to reuse dependencies or outputs between jobs.
-	12.	dependencies: Define dependencies on other jobs to access their artifacts.
-	13.	needs: Indicate jobs that this job explicitly depends on to control execution order.
-	14.	parallel: Define if and how the job should run in parallel.
-	15.	timeout: Set a custom timeout for the job.
-	16.	retry: Specify retry rules if the job fails.
-	17.	allow_failure: Indicate whether the job is allowed to fail without failing the entire pipeline.
-	18.	when: Define when the job should run (on_success, on_failure, always, or manual).
-	19.	environment: Specify the environment the job will interact with (useful for deployments).
-	20.	resource_group: Define a group of jobs that share resources.
-	21.	interruptible: Mark the job as interruptible to save resources during pipeline restarts.
-	22.	script, before_script, and after_script hooks: Additional scripts and commands to execute.
-	23.	Custom Keys: Define any custom keys specific to your organization’s pipeline structure or requirements.
+import os
 
+# Resolve the script's directory
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
-job_name:
-  extends: .base_template
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
-  variables:
-    ENV: "production"
-  before_script:
-    - echo "Preparing environment..."
-  script:
-    - echo "Running main script..."
-  after_script:
-    - echo "Cleaning up..."
-  stage: build
-  tags:
-    - docker
-  artifacts:
-    paths:
-      - build/
-  cache:
-    paths:
-      - node_modules/
-  dependencies:
-    - build_job
-  needs:
-    - test_job
-  parallel: 2
-  timeout: 15m
-  retry: 2
-  allow_failure: false
-  when: on_success
-  environment:
-    name: production
-    url: https://example.com
-  resource_group: my_group
-  interruptible: true
+# Build the absolute path
+file_path = os.path.join(script_dir, 'utils', 'config_logging.yml')
+
+# Open the file
+with open(file_path) as f:
+    content = f.read()
+
+print(content)
