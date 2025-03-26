@@ -1,13 +1,45 @@
-import os
+import requests
 
-# Resolve the script's directory
-script_dir = os.path.dirname(os.path.abspath(__file__))
+GITLAB_URL = "https://gitlab.com/api/graphql"
+HEADERS = {"Authorization": "Bearer YOUR_ACCESS_TOKEN"}
 
-# Build the absolute path
-file_path = os.path.join(script_dir, 'utils', 'config_logging.yml')
+query = """
+query GetMergeRequests($afterCursor: String) {
+  project(fullPath: "your-group/your-repo") {
+    mergeRequests(first: 100, after: $afterCursor) {
+      edges {
+        node {
+          id
+          title
+          createdAt
+          author {
+            username
+          }
+        }
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
+"""
 
-# Open the file
-with open(file_path) as f:
-    content = f.read()
+merge_requests = []
+after_cursor = None
 
-print(content)
+while True:
+    variables = {"afterCursor": after_cursor}
+    response = requests.post(GITLAB_URL, json={"query": query, "variables": variables}, headers=HEADERS)
+    data = response.json()
+
+    mrs = data["data"]["project"]["mergeRequests"]
+    merge_requests.extend(mrs["edges"])
+
+    if not mrs["pageInfo"]["hasNextPage"]:
+        break
+
+    after_cursor = mrs["pageInfo"]["endCursor"]
+
+print(f"Total MRs fetched: {len(merge_requests)}")
