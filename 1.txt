@@ -1,45 +1,129 @@
-import requests
+Your structure looks really solid already — it’s clear, organized, and touches all the key points that matter for a dashboard presentation. That said, I have a few suggestions to improve the flow, polish the language, and possibly enhance clarity and impact:
 
-GITLAB_URL = "https://gitlab.com/api/graphql"
-HEADERS = {"Authorization": "Bearer YOUR_ACCESS_TOKEN"}
+⸻
 
-query = """
-query GetMergeRequests($afterCursor: String) {
-  project(fullPath: "your-group/your-repo") {
-    mergeRequests(first: 100, after: $afterCursor) {
-      edges {
-        node {
-          id
-          title
-          createdAt
-          author {
-            username
-          }
-        }
-      }
-      pageInfo {
-        endCursor
-        hasNextPage
-      }
-    }
-  }
-}
-"""
+Refined Version of Your Presentation Plan
 
-merge_requests = []
-after_cursor = None
+⸻
 
-while True:
-    variables = {"afterCursor": after_cursor}
-    response = requests.post(GITLAB_URL, json={"query": query, "variables": variables}, headers=HEADERS)
-    data = response.json()
+1. Introduction
+	•	Purpose: Explain the motivation behind creating the dashboard (e.g., improving visibility on MR activity, helping teams track productivity, etc.)
+	•	Why Power BI: Highlight ease of use, powerful data modeling, corporate adoption, or any relevant factors.
 
-    mrs = data["data"]["project"]["mergeRequests"]
-    merge_requests.extend(mrs["edges"])
+⸻
 
-    if not mrs["pageInfo"]["hasNextPage"]:
-        break
+2. Dashboard Overview
+	•	Interface Walkthrough: Briefly present the layout and structure.
+	•	Key Sections: Highlight the main components (e.g., KPIs, charts, filters, etc.)
 
-    after_cursor = mrs["pageInfo"]["endCursor"]
+⸻
 
-print(f"Total MRs fetched: {len(merge_requests)}")
+3. How to Use the Dashboard
+	•	Interactive Elements:
+	•	Available slicers and filters
+	•	Ability to sort data in visualizations
+	•	Drill-through capabilities or focus mode (if applicable)
+	•	Classification Logic:
+	•	Explain how Merge Requests are flagged as “late”
+
+⸻
+
+4. Data Pipeline Overview
+	•	Data Sources:
+	•	GitLab for MRs (via GraphQL)
+	•	RM Excel file for release information
+	•	Data Flow:
+	•	Diagram/image showing table relationships
+	•	Python script triggered by a GitLab scheduled job
+	•	Data storage in Cosmos DB
+	•	Power BI data refresh via Data Gateway and scheduled syncs
+
+⸻
+
+5. Dashboard Publishing & CI/CD
+	•	Deployment Process:
+	•	Shared Power BI workspace
+	•	Dashboard file stored in a dedicated repository
+	•	Automated pipeline to deploy the dashboard (hands-free publishing)
+
+⸻
+
+6. Future Enhancements
+	•	Expand repository coverage
+	•	Automate the release table update process
+	•	Add new visuals/screens based on feedback
+
+⸻
+
+7. Acknowledgements
+	•	Emphasis on user-centric design
+	•	Alignment with UBS UI/UX guidelines
+	•	Shout-out to Amir for backend and deployment support
+
+⸻
+
+8. Q&A
+
+⸻
+
+9. (Optional) Live Demo
+	•	Offer to open Power BI Desktop for a deeper dive (only if there’s interest)
+
+⸻
+
+Optional Tweaks:
+	•	Consider having a 1-slide executive summary before jumping into the interface, summarizing key insights the dashboard provides (this gives context to managers before the technical details).
+	•	If time allows, it might be useful to briefly show a before/after comparison (how things were tracked before vs. now with the dashboard).
+
+Would you like me to help you turn this into a polished presentation script or slides?
+
+
+
+
+
+
+
+
+
+Presentation of Dashboard
+
+# Introduction
+Why it was created
+Why used Power BI
+
+# Presentation of the interface
+Show sections present in the dashboard
+
+# How to use the dashboard
+Possible slicers and filters
+How the MR is classified as late
+Possibility to sort data on views
+Possibility on focus one view
+
+# How we populate the data
+MRs from GitLab
+Releases from RM excel file
+Show image with relation between tables
+Queries from GraphQL accessing GitLab API
+Store the data on Cosmos DB
+Scheduled job on GitLab that runs a python script send data to Cosmos DB
+Use Datasource Gateways to sync data between Cosmos DB and Power BI
+Use scheduled syncs
+
+# How we publish it
+Published in a shared workspace
+We created a repository where we can upload the dashboard file and from this repository we have an automatic pipeline that will publish the dashboard directly on this shared workspace (hands free)
+
+# Next improvements
+Expand the list of repositories tracked on the dashboard
+Automate update of release table
+Prepare new screens and visuals according to user needs
+
+# Honorable mentions
+Focus on user experience
+Follow UBS guidelines for creation of interfaces
+Mention great support from Amir on preparing backend for data population and dashboard publish
+
+# Questions?
+
+# If there’s interest, I can show power bi desktop
